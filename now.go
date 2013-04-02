@@ -39,6 +39,10 @@ func loadZone(zone string) *time.Location {
 	if err == nil {
 		return loc
 	}
+	// Pure ASCII, but OK. Allow us to say "paris" as well as "Paris".
+	if len(zone) > 0 && 'a' <= zone[0] && zone[0] <= 'z' {
+		zone = string(zone[0]+'A'-'a') + string(zone[1:])
+	}
 	// See if there's a file with that name in /usr/share/zoneinfo
 	files, _ := filepath.Glob("/usr/share/zoneinfo/*/" + zone)
 	if len(files) >= 1 {
