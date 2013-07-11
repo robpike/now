@@ -28,6 +28,8 @@ func main() {
 		zone = os.Args[1]
 		if tz, ok := timeZone[zone]; ok {
 			zone = tz
+		} else if tz, ok = timeZone[toUpper(zone)]; ok {
+			zone = tz
 		}
 		t = t.In(loadZone(zone))
 	}
@@ -58,6 +60,19 @@ func loadZone(zone string) *time.Location {
 	os.Exit(1)
 	return nil
 
+}
+
+// Pure ASCII
+func toUpper(s string) string {
+	var b = make([]byte, len(s))
+	for i := range b {
+		c := s[i]
+		if 'a' <= c && c <= 'z' {
+			c -= ' '
+		}
+		b[i] = c
+	}
+	return string(b)
 }
 
 // from /usr/share/zoneinfo
