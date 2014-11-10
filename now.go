@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package main
+package main // import "robpike.io/cmd/now"
 
 // Now tells what time it is in other time zones. The first argument
 // identifies a time zone either by shorthand (EST, NYC) or by time zone
