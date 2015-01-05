@@ -6,11 +6,11 @@
 // identifies a time zone either by shorthand (EST, NYC) or by time zone
 // file base name, such as Yellowknife or Paris.
 //
-// % now Paris
-// Thu Apr 12 15:55:55 CEST 2012 Paris
-// % now Adelaide
-// Thu Apr 12 23:26:14 CST 2012 Adelaide
-// %
+// 	% now Paris
+// 	Thu Apr 12 15:55:55 CEST 2012 Paris
+// 	% now Adelaide
+// 	Thu Apr 12 23:26:14 CST 2012 Adelaide
+// 	%
 package main // import "robpike.io/cmd/now"
 
 
