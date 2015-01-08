@@ -13,7 +13,6 @@
 // 	%
 package main // import "robpike.io/cmd/now"
 
-
 import (
 	"fmt"
 	"os"
