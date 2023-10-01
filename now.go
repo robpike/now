@@ -74,30 +74,12 @@ func toUpper(s string) string {
 	return string(b)
 }
 
-// from /usr/share/zoneinfo
+// handy shortcuts. rhs is from /usr/share/zoneinfo
 var timeZone = map[string]string{
-	"GMT":     "Europe/London",
-	"BST":     "Europe/London",
-	"BSDT":    "Europe/London",
-	"CET":     "Europe/Paris",
-	"UTC":     "",
-	"PST":     "America/Los_Angeles",
-	"PDT":     "America/Los_Angeles",
-	"LA":      "America/Los_Angeles",
-	"LAX":     "America/Los_Angeles",
-	"MST":     "America/Denver",
-	"MDT":     "America/Denver",
-	"CST":     "America/Chicago",
-	"CDT":     "America/Chicago",
-	"Chicago": "America/Chicago",
-	"EST":     "America/New_York",
-	"EDT":     "America/New_York",
-	"NYC":     "America/New_York",
-	"NY":      "America/New_York",
-	"AEST":    "Australia/Sydney",
-	"AEDT":    "Australia/Sydney",
-	"AWST":    "Australia/Perth",
-	"AWDT":    "Australia/Perth",
-	"ACST":    "Australia/Adelaide",
-	"ACDT":    "Australia/Adelaide",
+	"GMT": "UTC",
+	"UTC": "",
+	"LA":  "America/Los_Angeles",
+	"LAX": "America/Los_Angeles",
+	"NY":  "America/New_York",
+	"NYC": "America/New_York",
 }
